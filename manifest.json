@@ -1,0 +1,13 @@
+{
+  "name": "Colorize Boosty Tickets",
+  "description": "Colorize Boosty Tickets",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://ticket.boosty.app/group/*"],
+      "js": ["colorize.js"]
+    }
+  ]
+
+}
