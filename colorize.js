@@ -22,5 +22,23 @@ const colorize = () => {
   });
 }
 
+console.log("Extention start!");
+
+// Observe実行
+const observerCallback = (mutationList, observer) => {
+  // console.log(window.location.href);
+  // const location = window.location.href;
+  if (location.match(/^https:\/\/ticket.boosty.app\/group\//)) {
+    // ここはウェイトを入れなくても問題ない
+    //setTimeout(colorize, 1000);
+    colorize();
+  }
+}
+
+const observeEl = document.querySelector("#__next");
+const observer = new MutationObserver(observerCallback);
+observer.observe(observeEl, { childList: true } );
+
 // DOMが構築されていないため？ 少し待つ
 setTimeout(colorize, 2000);
+//colorize();
