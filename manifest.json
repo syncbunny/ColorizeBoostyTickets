@@ -6,7 +6,8 @@
   "content_scripts": [
     {
       "matches": ["https://ticket.boosty.app/group/*"],
-      "js": ["colorize.js"]
+      "js": ["colorize.js"],
+      "run_at": "document_end"
     }
   ]
 
